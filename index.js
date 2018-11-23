@@ -1,10 +1,14 @@
 const express = require('express');
 const app = express();
-const port = process.env.port || 4000;
+const port = process.env.PORT || 5000;
 const mongoose = require('./config/db');
 const {Emp} = require('./models/employee.js');
 const bodyParser = require('body-parser');
 const {ObjectId} = require('mongodb');
+
+// mlab uri link
+//heroku config:set MONGOLAB_URI='mongodb://chethan:chethan$3kailash@ds245240.mlab.com:45240/daily-weekly'
+
 
 app.use(bodyParser.json());
 
