@@ -34,7 +34,7 @@ app.get('/about', function(req, res){
 
 
 // list all
-app.get('/patients', function(req, res){
+app.get('/garbage-monitor', function(req, res){
     Emp.find().then((emps) => {
         res.send(emps);
     }).catch(function(err){
@@ -43,7 +43,7 @@ app.get('/patients', function(req, res){
 });
 
 //create
-app.post('/patients', function(req, res){
+app.post('/garbage-monitor', function(req, res){
     let body = req.body;
     let emp = new Emp(body);
     emp.save().then((emp) => {
@@ -58,7 +58,7 @@ app.post('/patients', function(req, res){
 });
 
 //findOne
-app.get('/patients/:id', function(req, res){
+app.get('/garbage-monitor/:id', function(req, res){
     let id = req.params.id;
     if(!ObjectId.isValid(id))
     {
@@ -75,7 +75,7 @@ app.get('/patients/:id', function(req, res){
 });
 
 //delete
-app.delete('/patients/:id', function(req, res){
+app.delete('/garbage-monitor/:id', function(req, res){
     let id = req.params.id;
     if(!ObjectId.isValid(id))
     {
@@ -95,7 +95,7 @@ app.delete('/patients/:id', function(req, res){
 });
 
 //update
-app.put('/patients/:id', function(req, res){
+app.put('/garbage-monitor/:id', function(req, res){
     let id = req.params.id;
     let body = req.body;
     if(!ObjectId.isValid(id))
