@@ -2,8 +2,8 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const empSchema = new Schema({
-    ID: {
-        type: String,
+    num: {
+        type: Number,
         required: true
     }
 
